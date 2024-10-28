@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PromptScreen extends StatefulWidget {
-  const PromptScreen({super.key, required this.ShowHomeScreen});
   final VoidCallback ShowHomeScreen;
+  const PromptScreen({super.key, required this.ShowHomeScreen});
+
   @override
   State<PromptScreen> createState() => _PromptScreenState();
 }
