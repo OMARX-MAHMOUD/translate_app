@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:translate_app/widgets/language_dropdown.dart';
 
 class PromptScreen extends StatefulWidget {
+  // ignore: non_constant_identifier_names
   final VoidCallback ShowHomeScreen;
+  // ignore: non_constant_identifier_names
   const PromptScreen({super.key, required this.ShowHomeScreen});
 
   @override
@@ -11,6 +14,23 @@ class PromptScreen extends StatefulWidget {
 }
 
 class _PromptScreenState extends State<PromptScreen> {
+  //Variabled
+  String? selectCountryFrom;
+  String? selectCountryTo;
+  //Function to update the state of the selected language from
+  void _handlelanguageChangedFrom(String? newCountry) {
+    setState(() {
+      selectCountryFrom = newCountry;
+    });
+  }
+
+  //Function to update the state of the selected language to
+  void _handlelanguageChangedTo(String? newCountry) {
+    setState(() {
+      selectCountryTo = newCountry;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +73,18 @@ class _PromptScreenState extends State<PromptScreen> {
               padding: const EdgeInsets.only(top: 40.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [],
+                children: [
+                  //language dropdown from
+                  LanguageDropdown(
+                      onLanguageChanged: _handlelanguageChangedFrom),
+                  //Swap horiz_icon
+                  Icon(
+                    Icons.swap_horiz_rounded,
+                    color: const Color(0xFF6D1B7B).withOpacity(0.9),
+                  ),
+                  //language dropdown to
+                  LanguageDropdown(onLanguageChanged: _handlelanguageChangedTo),
+                ],
               ),
             )
           ],
