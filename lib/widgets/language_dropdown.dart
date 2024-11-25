@@ -34,7 +34,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
         color: const Color(0xFFFFFFFF),
         border: Border.all(
           color: const Color(0xFF6D1B7B).withOpacity(0.8),
-          width: 0.1,
+          width: 0.2,
         ),
       ),
       child: DropdownButton<String>(
@@ -50,7 +50,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
           padding: const EdgeInsets.only(left: 8.0),
           child: Icon(
             Icons.keyboard_arrow_down_rounded,
-            color: const Color(0xFF6D1B7B).withOpacity(0.3),
+            color: const Color(0xFF6D1B7B).withOpacity(0.8),
           ),
         ),
         underline: Container(

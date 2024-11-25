@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:translate_app/widgets/custombuttom.dart';
 import 'package:translate_app/widgets/language_dropdown.dart';
 
 class PromptScreen extends StatefulWidget {
@@ -86,7 +87,124 @@ class _PromptScreenState extends State<PromptScreen> {
                   LanguageDropdown(onLanguageChanged: _handlelanguageChangedTo),
                 ],
               ),
-            )
+            ),
+            // Padding around the selected language from
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0, left: 10.0),
+
+              // The selected language from in a row
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.poppins(
+                        height: 1.6,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Translate From ',
+                          style: GoogleFonts.poppins(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w300,
+                            color: const Color(0xFF000000),
+                          ),
+                        ),
+                        if (selectCountryFrom != null)
+                          TextSpan(
+                            text: '$selectCountryFrom',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Padding around the container for translate from
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+
+              // Container for translate from
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 223.0,
+                padding: const EdgeInsets.all(12.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                  color: const Color(0xFFFFFFFF),
+                  border: Border.all(
+                    color: const Color(0xFF6D1B7B).withOpacity(0.8),
+                    width: 0.2,
+                  ),
+                ),
+
+                // Translatefrom class here
+                // child: TranslateFrom(controller: controller),
+              ),
+            ),
+            // Padding around the selected language to
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0, left: 10.0),
+
+              // The selected language from in a row
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.poppins(
+                        height: 1.6,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Translate To ',
+                          style: GoogleFonts.poppins(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w300,
+                            color: const Color(0xFF000000),
+                          ),
+                        ),
+                        if (selectCountryTo != null)
+                          TextSpan(
+                            text: '$selectCountryTo',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Padding around the container for translate To
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+
+              // Container for translate to
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 223.0,
+                padding: const EdgeInsets.all(12.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                  color: const Color(0xFFFFFFFF),
+                  border: Border.all(
+                    color: const Color(0xFF6D1B7B).withOpacity(0.8),
+                    width: 0.2,
+                  ),
+                ),
+              ),
+            ),
+            CustomButtom(text: 'Sumbit')
           ],
         ),
       ),
