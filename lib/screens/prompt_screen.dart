@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:translate_app/widgets/custombuttom.dart';
 import 'package:translate_app/widgets/language_dropdown.dart';
 import 'package:translate_app/widgets/translate_from.dart';
+import 'package:translate_app/widgets/translate_to.dart';
 
 class PromptScreen extends StatefulWidget {
   // ignore: non_constant_identifier_names
@@ -20,6 +21,8 @@ class _PromptScreenState extends State<PromptScreen> {
   String? selectCountryFrom;
   String? selectCountryTo;
   TextEditingController controller = TextEditingController();
+  String _treanslateText = "";
+
   //Function to update the state of the selected language from
   void _handlelanguageChangedFrom(String? newCountry) {
     setState(() {
@@ -205,6 +208,9 @@ class _PromptScreenState extends State<PromptScreen> {
                       color: const Color(0xFF6D1B7B).withOpacity(0.8),
                       width: 0.2,
                     ),
+                  ),
+                  child: TranslateTo(
+                    translatedText: _treanslateText,
                   ),
                 ),
               ),

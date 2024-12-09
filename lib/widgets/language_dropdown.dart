@@ -23,6 +23,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
     {'countryLanguage': 'German', 'countryImage': 'assets/images/germany.png'},
     {'countryLanguage': 'French', 'countryImage': 'assets/images/france.png'},
     {'countryLanguage': 'Spanish', 'countryImage': 'assets/images/spain.png'},
+    {'countryLanguage': 'Arabic', 'countryImage': 'assets/images/arabic.png'},
   ];
   String? selectedCountry;
   @override
