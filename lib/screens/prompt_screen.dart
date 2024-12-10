@@ -21,7 +21,7 @@ class _PromptScreenState extends State<PromptScreen> {
   String? selectCountryFrom;
   String? selectCountryTo;
   TextEditingController controller = TextEditingController();
-  String _treanslateText = "";
+  final String _treanslateText = "";
 
   //Function to update the state of the selected language from
   void _handlelanguageChangedFrom(String? newCountry) {
