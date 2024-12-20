@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 image: AssetImage('assets/images/worldmap.png'),
                 fit: BoxFit.cover)),
         child: Padding(
-          padding: const EdgeInsets.only(top: 80, left: 16, right: 16),
+          padding: const EdgeInsets.only(top: 80, left: 5, right: 5), //16
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

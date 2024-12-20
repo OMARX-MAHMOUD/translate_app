@@ -16,7 +16,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
     },
     {
       'countryLanguage': 'English - UK',
-      'countryImage': 'assets/images/britain.png'
+      'countryImage': 'assets/images/usa.png'
     },
     {'countryLanguage': 'Russian', 'countryImage': 'assets/images/russia.png'},
     {'countryLanguage': 'Italian', 'countryImage': 'assets/images/italy.png'},
@@ -24,6 +24,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
     {'countryLanguage': 'French', 'countryImage': 'assets/images/france.png'},
     {'countryLanguage': 'Spanish', 'countryImage': 'assets/images/spain.png'},
     {'countryLanguage': 'Arabic', 'countryImage': 'assets/images/arabic.png'},
+    {'countryLanguage': 'China', 'countryImage': 'assets/images/china.png'},
   ];
   String? selectedCountry;
   @override
@@ -43,7 +44,7 @@ class _LanguageDropdownState extends State<LanguageDropdown> {
         hint: Text(
           "Select Language",
           style: GoogleFonts.poppins(
-            fontSize: 14.0,
+            fontSize: 12.0, //16
             color: const Color(0xFF000000),
           ),
         ),

@@ -306,7 +306,7 @@ class _PromptScreenState extends State<PromptScreen> {
               ),
               // Container for submit button in padding
               CustomButtom(
-                text: 'Submit',
+                text: 'Translate',
                 ontap: _translateText,
               )
             ],

@@ -22,7 +22,7 @@ class _CountryRectanglesState extends State<CountryRectangles> {
     {'countryName': 'Germany', 'countryImage': 'assets/images/germany.png'},
     {'countryName': 'France', 'countryImage': 'assets/images/france.png'},
     {'countryName': 'China', 'countryImage': 'assets/images/china.png'},
-    {'countryName': 'England', 'countryImage': 'assets/images/britain.png'},
+    {'countryName': 'England', 'countryImage': 'assets/images/usa.png'},
     {'countryName': 'Saudi', 'countryImage': 'assets/images/arabic.png'},
   ];
 
